@@ -4,7 +4,8 @@ $(function() {
     dataType: 'jsonp',
     success: function(response) {
       response.courses.completed.forEach(function(item,index){
-          var a = $("#badges").append("div");
+          var a = $("<div></div>");
+          $("#badges").append(a);
           $(a).addClass("course");
           $(a).append("<h3>"+item.title+"</h3>");
           $(a).append("<img src="+item.badge+">");
